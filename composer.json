@@ -1,0 +1,37 @@
+{
+    "name": "the_alex_mark/laravel-hooks",
+    "version": "1.0",
+    "description": "Реализует систему «крючков» для кастомизации проекта.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Макаров Александр",
+            "email": "the_alex_mark@mail.ru",
+            "homepage": "https://the-alex-mark.ru"
+        }
+    ],
+    "keywords": [ "laravel", "hooks" ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^6.21"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "ProgLib\\Hooks\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ProgLib\\Hooks\\Providers\\HooksServiceProvider"
+            ],
+            "aliases": {
+                "Hooks": "ProgLib\\Hooks\\Facades\\Hooks"
+            }
+        }
+    }
+}
